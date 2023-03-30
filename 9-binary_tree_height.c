@@ -13,6 +13,8 @@ size_t check_node_right(const binary_tree_t *tree);
 
 size_t check_node_left(const binary_tree_t *tree)
 {
+	if (!(tree))
+		return (0);
 	if (tree->left)
 		return (1 + check_node_left(tree->left));
 	return (0);
@@ -29,6 +31,8 @@ size_t check_node_left(const binary_tree_t *tree)
 
 size_t check_node_right(const binary_tree_t *tree)
 {
+	if (!(tree))
+		return (0);
 	if (tree->right)
 		return (1 + check_node_right(tree->right));
 	return (0);
